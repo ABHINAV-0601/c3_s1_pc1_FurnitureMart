@@ -7,8 +7,9 @@ public class FurnitureItem {
     double price;
 
     public double flatDiscount(double discountPercentage,String typeOfUse){
-        if(typeOfUse == outdoor){
+        if(typeOfUse.equalsIgnoreCase("outdoor")){
                 return price - (price * discountPercentage/100);
         }
+        return 0.0;
     }
 }
